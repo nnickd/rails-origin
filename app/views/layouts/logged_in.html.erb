@@ -14,12 +14,10 @@
     <body>
         <div class="topbar callout menu">
             <div class="menu align-right">
-                <%= link_to current_user.username, users_path, class: "button"%>
+                <%= link_to current_user.username, user_path(current_user.username), class: "button"%>
                 <%= link_to 'log out', root_path, class: "button" %>
             </div>
         </div>
-
         <%= yield %>
-
     </body>
 </html>
