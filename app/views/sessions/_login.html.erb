@@ -1,0 +1,14 @@
+<div class="row align-center align-middle box">
+    <div class="medium-6 columns">
+        <%= form_tag sessions_path do %>
+        <div class="callout align-center align-middle">
+            <%= text_field_tag :username, nil, placeholder: "username", class: "text-center"  %>
+            <%= password_field_tag :password, nil, placeholder: "password", class: "text-center"  %>
+            <%= submit_tag 'Log in', class: "expanded large button"  %>
+        </div>
+        <% end %>
+        <div class="callout align-center align-middle">
+            <%= render 'users/form' %>
+        </div>
+    </div>
+</div>
