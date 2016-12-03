@@ -14,7 +14,8 @@
     <body>
         <div class="topbar callout menu">
             <div class="menu align-right">
-                <%= link_to 'log in', root_path, class: "button" unless current_page?(:controller => 'sessions', :action => 'home') %>
+                <%= link_to current_user.username, users_path, class: "button"%>
+                <%= link_to 'log out', root_path, class: "button" %>
             </div>
         </div>
 
